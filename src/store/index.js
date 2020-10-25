@@ -31,7 +31,6 @@ export default new Vuex.Store({
         if (chunkCount <= wholeChunks) percentResult += percentChunk;
         else percentResult += remainderPercent;
         if (context.state.progress > 99.99) percentResult = 100;
-        console.log(wholeChunks, chunkCount, percentResult);
         context.commit('progressMutation', percentResult);
         return percentResult;
       }
